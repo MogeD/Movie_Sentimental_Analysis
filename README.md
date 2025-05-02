@@ -1,18 +1,51 @@
 # Movie Sentiment Analyzer
 
-A modern web application for analyzing sentiment in movie reviews using deep learning, featuring a React frontend and FastAPI backend.
+A powerful sentiment analysis system that helps movie industry professionals, streaming platforms, and content aggregators make data-driven decisions through AI-powered review analysis.
 
 ![Movie Sentiment Analyzer](docs/screenshot.png)
 
-## Project Overview
+## Business Value
 
-This project implements a sentiment analysis system that can classify movie reviews as positive or negative. It features:
+### Key Benefits
+
+- **Real-time Analysis**: Process thousands of movie reviews instantly
+- **Cost Efficiency**: Reduce manual review processing time and costs
+- **Data-Driven Insights**: Make informed decisions based on audience sentiment
+- **Scalable Solution**: Handle growing review volumes with ease
+
+### Industry Applications
+
+#### Movie Studios & Production Companies
+
+- Understand audience reception
+- Identify successful movie elements
+- Optimize marketing strategies
+- Make data-driven production decisions
+
+#### Streaming Platforms
+
+- Enhance content recommendation systems
+- Improve content categorization
+- Track audience sentiment trends
+- Make informed content acquisition decisions
+
+#### Review Aggregators
+
+- Automate review analysis
+- Provide accurate audience scores
+- Scale review processing capabilities
+- Generate comprehensive sentiment reports
+
+## Technical Overview
+
+### Core Features
 
 - Deep learning model using LSTM and GloVe word embeddings
-- Modern React frontend with TypeScript
-- FastAPI backend service
-- Real-time sentiment analysis
+- Real-time sentiment analysis with confidence scoring
 - Analysis history tracking
+- Modern, responsive UI
+- RESTful API backend
+- Pre-trained deep learning model
 
 ### Technical Stack
 
@@ -30,9 +63,20 @@ This project implements a sentiment analysis system that can classify movie revi
 - Modern UI components
 - Real-time API integration
 
-## Required Files
+## Model Performance
 
-Before running the application, you need to download some large files that are not included in the repository:
+The sentiment analysis model achieves:
+
+- Accuracy: ~84%
+- Precision: 0.86 (negative), 0.82 (positive)
+- Recall: 0.81 (negative), 0.87 (positive)
+- F1-score: 0.83 (negative), 0.84 (positive)
+
+## Getting Started
+
+### Required Files
+
+Before running the application, download these essential files:
 
 1. GloVe Word Embeddings:
 
@@ -48,11 +92,11 @@ Before running the application, you need to download some large files that are n
 
 3. Pre-trained Model Files:
    - Download: [model_files.zip](https://drive.google.com/file/your-file-id/view)
-   - Extract and place the following files:
+   - Extract and place:
      - `lstm_glove_sentiment_model.h5` → `backend/models/`
      - `tokenizer.pkl` → `backend/models/`
 
-## Installation
+### Installation
 
 1. Install Git LFS:
 
@@ -67,18 +111,11 @@ brew install git-lfs
 sudo apt install git-lfs
 ```
 
-2. Clone the repository with Git LFS:
+2. Clone the repository:
 
 ```bash
-# Initialize Git LFS
-git lfs install
-
-# Clone the repository
 git clone [repository-url]
 cd Movie_Sentimental_Analysis
-
-# Pull LFS files
-git lfs pull
 ```
 
 3. Install backend dependencies:
@@ -95,10 +132,6 @@ cd ../frontend
 npm install
 ```
 
-5. Download and place the required model files:
-   - Place `lstm_glove_sentiment_model.h5` in `backend/models/`
-   - Place `tokenizer.pkl` in `backend/models/`
-
 ## Running the Application
 
 1. Start the backend server:
@@ -108,7 +141,7 @@ cd backend
 python app.py
 ```
 
-The API will be available at `http://localhost:8001`
+API available at `http://localhost:8001`
 
 2. Start the frontend development server:
 
@@ -117,49 +150,11 @@ cd frontend
 npm start
 ```
 
-The web interface will be available at `http://localhost:3000`
-
-## Project Structure
-
-```
-Movie_Sentimental_Analysis/
-├── backend/
-│   ├── app.py              # FastAPI application
-│   ├── models/             # Trained models directory
-│   │   ├── lstm_glove_sentiment_model.h5
-│   │   └── tokenizer.pkl
-│   └── requirements.txt    # Backend dependencies
-├── frontend/
-│   ├── src/               # React source code
-│   ├── public/            # Static assets
-│   └── package.json       # Frontend dependencies
-├── models/                # Model training artifacts
-├── Word_Embeddings_model.ipynb  # Model training notebook
-├── utils.py              # Utility functions
-└── README.md             # Project documentation
-```
-
-## Features
-
-- Real-time sentiment analysis of movie reviews
-- Confidence score for predictions
-- Analysis history tracking
-- Modern, responsive UI
-- RESTful API backend
-- Pre-trained deep learning model
-
-## Model Performance
-
-The sentiment analysis model achieves:
-
-- Accuracy: ~84%
-- Precision: 0.86 (negative), 0.82 (positive)
-- Recall: 0.81 (negative), 0.87 (positive)
-- F1-score: 0.83 (negative), 0.84 (positive)
+Web interface available at `http://localhost:3000`
 
 ## API Documentation
 
-The API documentation is available at:
+Access the API documentation at:
 
 - Swagger UI: `http://localhost:8001/docs`
 - ReDoc: `http://localhost:8001/redoc`
@@ -177,41 +172,35 @@ The API documentation is available at:
 
 ### Backend Development
 
-1. Install development dependencies:
-
 ```bash
 pip install -r requirements-dev.txt
-```
-
-2. Run tests:
-
-```bash
 pytest
 ```
 
 ### Frontend Development
 
-1. Install dependencies:
-
 ```bash
 npm install
-```
-
-2. Run development server:
-
-```bash
 npm start
-```
-
-3. Build for production:
-
-```bash
 npm run build
 ```
+
+## Future Enhancements
+
+- Aspect-based sentiment analysis (plot, acting, direction)
+- Historical trend analysis
+- Comparative analysis between movies
+- Advanced analytics dashboard
+- Batch processing capabilities
+- Custom report generation
 
 ## Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
+
+## License
+
+[Your chosen license]
 
 ## Acknowledgments
 
