@@ -198,10 +198,6 @@ npm run build
 
 Contributions are welcome! Please feel free to submit a Pull Request.
 
-## License
-
-[Your chosen license]
-
 ## Acknowledgments
 
 - GloVe word embeddings from Stanford NLP
